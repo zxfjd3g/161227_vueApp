@@ -1,0 +1,14 @@
+body {
+    background: blue;
+}
+
+#box1{
+    background-image: url(../img/big.jpg);
+    height: 200px;
+    width: 200px;
+}
+#box2{
+    background-image: url(../img/big.jpg);
+    height: 500px;
+    width: 500px;
+}
