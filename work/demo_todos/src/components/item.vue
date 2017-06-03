@@ -4,14 +4,16 @@
       <input type="checkbox" v-model="todo.complete"/>
       <span>{{todo.title}}</span>
     </label>
-    <button class="btn btn-danger" v-show="isShow">删除</button>
+    <button class="btn btn-danger" v-show="isShow" @click="removeItem">删除</button>
   </li>
 </template>
 
 <script>
   export default {
     props: {
-      todo: Object
+      todo: Object,
+      removeTodo: Function,
+      index: Number
     },
     data () {
       return {
@@ -27,6 +29,11 @@
         } else {
           this.bgColor = 'white'
           this.isShow = false
+        }
+      },
+      removeItem () {
+        if (window.confirm(`确定删除${this.todo.title}吗?`)) {
+          this.removeTodo(this.index)
         }
       }
     }
