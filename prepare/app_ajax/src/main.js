@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
-import App from './components/App1'
+import App from './components/App'
 
 //使用插件
 Vue.use(VueResource)
