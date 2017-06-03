@@ -12,6 +12,7 @@
   export default {
     props: {
       todo: Object,
+      removeTodo: Function,
       index: Number
     },
     data () {
@@ -32,9 +33,7 @@
       },
       removeItem () {
         if (window.confirm(`确定删除${this.todo.title}吗?`)) {
-          // this.removeTodo(this.index)
-          // 分发事件
-          this.$dispatch('remove', this.index)
+          this.removeTodo(this.index)
         }
       }
     }

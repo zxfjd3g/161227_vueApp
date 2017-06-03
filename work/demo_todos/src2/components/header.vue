@@ -6,6 +6,12 @@
 
 <script>
   export default {
+    props: {
+      addTodo: {
+        type: Function,
+        required: true
+      }
+    },
     data () {
       return {
         inputTodo: ''
@@ -19,13 +25,10 @@
           return
         }
         // 添加todo
-
-        // 发布一个消息
-        this.$emit('add', {
+        this.addTodo({
           title: inputTodo,
           complete: false
         })
-
         // 清除输入的数据
         this.inputTodo = ''
       }
