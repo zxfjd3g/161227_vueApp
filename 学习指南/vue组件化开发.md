@@ -68,11 +68,11 @@
         props: {
           name: String,
           age: Number,
-          setNmae: Function
+          setName: Function
         }
         //方式三: 指定名称/类型/必要性/默认值
         props: {
-          name: {type: String, required: true, default:xxx},
+          name: {type: String, required: true, value:xxx},
         }
         ```
       * 所有props的属性都会成为component对象的属性, 模板页面可以直接引用

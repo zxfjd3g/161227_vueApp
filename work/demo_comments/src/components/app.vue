@@ -34,6 +34,7 @@
         this.comments.unshift(comment)
       },
       remove (comment) {
+        console.log(this)
         this.comments.$remove(comment)
       }
     },
