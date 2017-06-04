@@ -56,7 +56,7 @@
       <a v-link="{path:'/about'}">About</a>
       <a v-link="{path:'/home'}">Home</a>
       <!--用于渲染当前路由组件-->
-      <router-view keep-alive></router-view>  
+      <router-view></router-view>  
     </div>
     ```
   * 入口js: main.js
