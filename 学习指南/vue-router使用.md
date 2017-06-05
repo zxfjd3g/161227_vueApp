@@ -9,7 +9,7 @@
   import VueRouter from 'vue-router'
   ```
 * 相关API说明
-  * VueRouter(): 构建函数, 用来创建路由器对象
+  * VueRouter(): 构造函数, 用来创建路由器对象
     * 配置: 在创建对象时可以指定一个配置对象
       ```
       new VueRouter({
