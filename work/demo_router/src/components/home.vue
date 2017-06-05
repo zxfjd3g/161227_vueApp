@@ -1,6 +1,9 @@
 <template>
   <div>
     <h2>Home件</h2>
+
+    <input type="text">
+    <p>{{msg | json}}</p>
     <!--
       v-link
       <router-view>
@@ -20,7 +23,9 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+    props: ['msg']
+  }
 </script>
 
 <style>

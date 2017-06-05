@@ -21,7 +21,7 @@
         <div class="panel">
           <div class="panel-body">
             <!--用于渲染匹配的组件-->
-            <router-view></router-view>
+            <router-view keep-alive :msg="msg"></router-view>
           </div>
         </div>
       </div>
@@ -30,7 +30,13 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+    data () {
+      return {
+        msg: {title: 'atguigu', age: 12}
+      }
+    }
+  }
 </script>
 
 <style>
